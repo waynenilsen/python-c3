@@ -2,6 +2,8 @@ __author__ = 'wnilsen'
 
 import pyc3
 import unittest
+import pandas
+import numpy
 
 class C3Test(unittest.TestCase):
     def setUp(self):
@@ -9,6 +11,44 @@ class C3Test(unittest.TestCase):
 
     def test_chart(self):
         configurations = [
+            {
+                "data": {
+                    "x": 'x',
+                    "columns": [
+                        ['x', '2013-10-31', '2013-12-31', '2014-01-31', '2014-02-28'],
+                        ['sample', 30, 100, 400, 150],
+                    ]
+                },
+                "axis": {
+                    "x": {
+                        "type": 'timeseries',
+                        "tick": {
+                            "fit": False,
+                            "format": "%e %b %y",
+                            "count": 7
+                        }
+                    }
+                }
+            },
+            {
+                "data": {
+                    "columns": pandas.DataFrame(numpy.random.randn(30, 4), columns=list('ABCD')),
+                    "xs": {
+                        'A': 'B',
+                        'C': 'D'
+                    },
+                    'type': 'scatter',
+                    'axis': {
+                        'x': {
+                            'tick': {
+                                'fit': False,
+                                'count': 10
+                            }
+                        }
+                    }
+                    # 'axis_x_tick_values': [-1, 0, 1]
+                }
+            },
             {
             "data": {
                 "columns": [
@@ -51,5 +91,7 @@ class C3Test(unittest.TestCase):
                 }
             }
         ]
-        for c in configurations:
-            pyc3.generate(config=c)
+
+        # for c in configurations:
+        # pyc3.generate(config=c)
+        pyc3.generate(config=configurations[1])
