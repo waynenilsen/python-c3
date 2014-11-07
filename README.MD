@@ -19,6 +19,7 @@ Lots of examples of appropriate dictionaries to provide are found [on the c3 exa
 
 Future improvements include
 
-1. pandas support
-2. api support
-3. possible flask-based server version
+* pandas support
+* api support
+* possible flask-based server version
+* possible image output via [spynner](https://github.com/makinacorpus/spynner) as in [this](http://stackoverflow.com/a/3370724/2075745)
