@@ -32,21 +32,19 @@ class C3Test(unittest.TestCase):
             },
             {
                 "data": {
-                    "columns": pandas.DataFrame(numpy.random.randn(30, 4), columns=list('ABCD')),
+                    "columns": pandas.DataFrame(numpy.random.randn(300, 4), columns=list('ABCD')),
                     "xs": {
                         'A': 'B',
                         'C': 'D'
                     },
-                    'type': 'scatter',
-                    'axis': {
-                        'x': {
-                            'tick': {
-                                'fit': False,
-                                'count': 10
-                            }
+                    'type': 'scatter'
+                },
+                'axis': {
+                    'x': {
+                        'tick': {
+                            'fit': False
                         }
                     }
-                    # 'axis_x_tick_values': [-1, 0, 1]
                 }
             },
             {
