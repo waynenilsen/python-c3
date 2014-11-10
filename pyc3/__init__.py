@@ -16,13 +16,13 @@ import numpy
 _defaultTemplate = '''
 <html>
   <head>
-    <link href="https://rawgit.com/masayuki0812/c3/master/c3.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.rawgit.com/masayuki0812/c3/master/c3.min.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div id="chart"></div>
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="https://rawgit.com/masayuki0812/c3/master/c3.min.js"></script>
+    <script src="https://cdn.rawgit.com/masayuki0812/c3/master/c3.min.js"></script>
     <script>
       var chart = c3.generate(
           {config}
