@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ac00e3a-1225-4c9b-99e8-b689b4de4ba3" name="Default" comment="added requirements for readthedocs">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/setup.py" />
+    <list default="true" id="0ac00e3a-1225-4c9b-99e8-b689b4de4ba3" name="Default" comment="still trying to get readthedocs to work">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="X:\Wayne\python-c3\doc\setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <ignored path="python-c3.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,10 +40,10 @@
         </entry>
       </file>
       <file leaf-file-name="setup.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/doc/setup.py">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31863284" vertical-offset="0" max-vertical-offset="907">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.33737597" vertical-offset="0" max-vertical-offset="907">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -179,6 +178,11 @@
     <option name="myPythonConsoleState">
       <console-settings />
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="X:\Wayne\python-c3" />
+    </key>
   </component>
   <component name="RunManager" selected="Python tests.test ">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -394,7 +398,11 @@
       <created>1415823831228</created>
       <updated>1415823831228</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="still trying to get readthedocs to work">
+      <created>1415824556579</created>
+      <updated>1415824556579</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -444,7 +452,8 @@
     <MESSAGE value="added sphinx docs" />
     <MESSAGE value="making readthedocs friendly, removed function annotations." />
     <MESSAGE value="added requirements for readthedocs" />
-    <option name="LAST_COMMIT_MESSAGE" value="added requirements for readthedocs" />
+    <MESSAGE value="still trying to get readthedocs to work" />
+    <option name="LAST_COMMIT_MESSAGE" value="still trying to get readthedocs to work" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -589,10 +598,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doc/setup.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31863284" vertical-offset="0" max-vertical-offset="907">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.33737597" vertical-offset="0" max-vertical-offset="907">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
