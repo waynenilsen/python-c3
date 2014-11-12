@@ -47,6 +47,8 @@ def generate(config, outputFile=None, show=True, template=None):
     :param show: opens the browser with the file:// syntax if true
     :param template: override the default template with this string, see _defaultTemplate in this file for an example.
     The content is copied below:
+
+    .. code-block:: html
             <html>
               <head>
                 <link href="https://cdn.rawgit.com/masayuki0812/c3/master/c3.min.css" rel="stylesheet" type="text/css">
