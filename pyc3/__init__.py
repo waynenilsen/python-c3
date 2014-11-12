@@ -33,14 +33,31 @@ _defaultTemplate = '''
 '''
 
 
-def generate(config:dict, outputFile=None, show:bool=True, template:str=None):
+def generate(config, outputFile=None, show=True, template=None):
     '''
     Similar to the c3.generate function of c3.js
 
     :param config: the dictionary supplied to the C3 generate function see http://c3js.org/examples.html for more
     :param outputFile: optional path to the output file, will use temporary file if not provided.
     :param show: opens the browser with the file:// syntax if true
-    :param template: override the default template with this string, see _defaultTemplate in this file for an example
+    :param template: override the default template with this string, see _defaultTemplate in this file for an example.
+    The content is copied below:
+            <html>
+              <head>
+                <link href="https://cdn.rawgit.com/masayuki0812/c3/master/c3.min.css" rel="stylesheet" type="text/css">
+              </head>
+              <body>
+                <div id="chart"></div>
+
+                <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+                <script src="https://cdn.rawgit.com/masayuki0812/c3/master/c3.min.js"></script>
+                <script>
+                  var chart = c3.generate(
+                      {config}
+                  );
+                </script>
+              </body>
+            </html>
 
     :return: nothing.
     '''

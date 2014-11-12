@@ -10,18 +10,8 @@ Welcome to python-c3's documentation!
 .. automodule:: pyc3
    :members:
 
-   
+
 Contents:
 
 .. toctree::
    :maxdepth: 2
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
