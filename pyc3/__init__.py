@@ -1,6 +1,25 @@
 '''
-Python wrapper for the C3.js - D3 based reusable chart library. No dependencies other than standard python libraries.
-Tested with Python 3.3
+python-`c3 <http://c3js.org/>`_ is a python wrapper for the C3.js - D3 based reusable chart library.
+It has no dependencies other than standard python libraries. It is generally tested with python 3.3.
+
+Quickstart
+==========
+
+.. code-block:: python
+
+    import pyc3
+    pyc3.generate({
+        "data": {
+            "columns": [
+                ['data1', 30, 200, 100, 400, 150, 250],
+                ['data2', 50, 20, 10, 40, 15, 25]
+            ]
+        }
+    })
+
+Details
+=======
+
 '''
 
 __author__ = 'wnilsen'
@@ -42,11 +61,37 @@ def generate(config, outputFile=None, show=True, template=None):
     '''
     Similar to the c3.generate function of c3.js
 
-    :param config: the dictionary supplied to the C3 generate function see http://c3js.org/examples.html for more
-    :param outputFile: optional path to the output file, will use temporary file if not provided.
-    :param show: opens the browser with the file:// syntax if true
-    :param template: override the default template with this string, see _defaultTemplate in this file for an example.
-    The content is copied below:
+    :param dict config: the dictionary supplied to the C3 generate function see http://c3js.org/examples.html for more
+    :param str outputFile: optional path to the output file, will use temporary file if not provided.
+    :param bool show: opens the browser with the file:// syntax if true using the standard python :mod:`webbrowser` module
+    :param str template: override the default template with this string, see below for an example.
+
+    **Pandas Integration**
+
+    .. code-block:: python
+
+        pyc3.generate({
+            "data": {
+                "columns": pandas.DataFrame(numpy.random.randn(300, 4), columns=list('ABCD')),
+                "xs": {
+                    'A': 'B',
+                    'C': 'D'
+                },
+                'type': 'scatter'
+            },
+            'axis': {
+                'x': {
+                    'tick': {
+                        'fit': False
+                    }
+                }
+            }
+        })
+
+
+    **HTML/JS/CSS Templates**
+
+    The default template content is copied below, alternative templates may be provided.
 
     .. code-block:: html
 
@@ -67,8 +112,8 @@ def generate(config, outputFile=None, show=True, template=None):
           </body>
         </html>
 
-    The template is such that it simply uses the standard python string `format` function all that is expected is that
-    somewhere in the template, `{config}` is present.
+    The template is such that it simply uses the standard python string :py:func:`format` function all that is expected is that
+    somewhere in the template, ``{config}`` is present.
 
     :return: nothing.
     '''
