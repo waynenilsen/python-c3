@@ -49,22 +49,26 @@ def generate(config, outputFile=None, show=True, template=None):
     The content is copied below:
 
     .. code-block:: html
-            <html>
-              <head>
-                <link href="https://cdn.rawgit.com/masayuki0812/c3/master/c3.min.css" rel="stylesheet" type="text/css">
-              </head>
-              <body>
-                <div id="chart"></div>
 
-                <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-                <script src="https://cdn.rawgit.com/masayuki0812/c3/master/c3.min.js"></script>
-                <script>
-                  var chart = c3.generate(
-                      {config}
-                  );
-                </script>
-              </body>
-            </html>
+        <html>
+          <head>
+            <link href="https://cdn.rawgit.com/masayuki0812/c3/master/c3.min.css" rel="stylesheet" type="text/css">
+          </head>
+          <body>
+            <div id="chart"></div>
+
+            <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+            <script src="https://cdn.rawgit.com/masayuki0812/c3/master/c3.min.js"></script>
+            <script>
+              var chart = c3.generate(
+                  {config}
+              );
+            </script>
+          </body>
+        </html>
+
+    The template is such that it simply uses the standard python string `format` function all that is expected is that
+    somewhere in the template, `{config}` is present.
 
     :return: nothing.
     '''
