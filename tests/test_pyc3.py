@@ -90,6 +90,6 @@ class C3Test(unittest.TestCase):
             }
         ]
 
-        # for c in configurations:
-        # pyc3.generate(config=c)
-        pyc3.generate(config=configurations[1])
+        for c in configurations:
+            pyc3.generate(config=c)
+            # pyc3.generate(config=configurations[1])
