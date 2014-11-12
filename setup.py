@@ -2,7 +2,7 @@ __author__ = 'wnilsen'
 
 from setuptools import setup
 
-long_descr = open('README.md').read()
+long_descr = open('README.MD').read()
 
 setup(
     name='python-c3',
