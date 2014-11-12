@@ -9,8 +9,13 @@ import json
 import tempfile
 import webbrowser
 import os
-import pandas
-import numpy
+
+try:
+    import pandas
+
+    PANDAS = True
+except:
+    PANDAS = False
 
 
 _defaultTemplate = '''
@@ -67,15 +72,15 @@ def generate(config, outputFile=None, show=True, template=None):
         outputFile = open(outputFile, 'w')
     if template is None:
         template = _defaultTemplate
-
-    if isinstance(config['data']['columns'], pandas.DataFrame):
-        d = config['data']['columns'].to_dict()
-        # this essentially converts to the C3 format from pandas format.
-        # indexes are ignored for now, data must be in columns.
-        config['data']['columns'] = [
-            [k] + [e for k2, e in v.items()]
-            for k, v in d.items()
-        ]
+    if PANDAS:
+        if isinstance(config['data']['columns'], pandas.DataFrame):
+            d = config['data']['columns'].to_dict()
+            # this essentially converts to the C3 format from pandas format.
+            # indexes are ignored for now, data must be in columns.
+            config['data']['columns'] = [
+                [k] + [e for k2, e in v.items()]
+                for k, v in d.items()
+            ]
 
     outputFile.write(_defaultTemplate.format(
         config=json.dumps(config)

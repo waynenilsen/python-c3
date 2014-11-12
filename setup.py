@@ -14,7 +14,5 @@ setup(
     license='MIT',
     packages=['pyc3'],
     zip_safe=False,
-    install_requires=[
-        'pandas'
-    ]
+    install_requires=[]
 )
