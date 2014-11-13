@@ -59,7 +59,7 @@ _defaultTemplate = '''
 
 def generate(config, outputFile=None, show=True, template=None):
     '''
-    Similar to the c3.generate function of c3.js
+    Passing through to the ``c3.generate`` function of C3
 
     :param dict config: the dictionary supplied to the C3 generate function see http://c3js.org/examples.html for more
     :param str outputFile: optional path to the output file, will use temporary file if not provided.
@@ -113,7 +113,7 @@ def generate(config, outputFile=None, show=True, template=None):
         </html>
 
     The template is such that it simply uses the standard python string :py:func:`format` function all that is expected is that
-    somewhere in the template, ``{config}`` is present.
+    there is a javascript area where ``var chart = c3.generate({config});`` is present along with ``<div id="chart"></div>``.
 
     :return: nothing.
     '''

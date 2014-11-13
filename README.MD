@@ -19,8 +19,7 @@ Lots of examples of appropriate dictionaries to provide are found [on the c3 exa
 
 Future improvements include
 
-* custom css
-* custom full template
+* explicit custom css
 * [dynamic api](http://c3js.org/examples.html#api) support ... somehow, would likely require ajax
 * possible flask-based server version
 * possible image output via [spynner](https://github.com/makinacorpus/spynner) as in [this](http://stackoverflow.com/a/3370724/2075745)
@@ -28,3 +27,4 @@ Future improvements include
 Completed improvements
 
 * pandas support
+* custom full template
